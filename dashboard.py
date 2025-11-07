@@ -63,7 +63,7 @@ def fetch_data(_conn):
 st.set_page_config(page_title="Soil Moisture Dashboard", layout="wide")
 
 # Title of the dashboard
-st.title("🌱 Soil Moisture Real-Time Dashboard")
+st.title("Soil Moisture Real-Time Dashboard")
 
 # Create a placeholder for our chart
 placeholder = st.empty()

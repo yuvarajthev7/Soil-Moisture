@@ -65,14 +65,14 @@ def check_thresholds(device_id, moisture):
 
     if moisture < ALERT_THRESHOLDS["DRY_LIMIT"]:
         print("\n" + "!"*40)
-        print(f"  🚨 ALERT: SOIL IS TOO DRY! 🚨")
+        print(f"  ALERT: SOIL IS TOO DRY!")
         print(f"  Device: {device_id} | Moisture: {moisture}")
         print("  Action:   Start irrigation.")
         print("!"*40 + "\n")
 
     elif moisture > ALERT_THRESHOLDS["WET_LIMIT"]:
         print("\n" + "="*40)
-        print(f"  ⚠️  WARNING: SOIL IS TOO WET  ⚠️")
+        print(f"  WARNING: SOIL IS TOO WET")
         print(f"  Device: {device_id} | Moisture: {moisture}")
         print(f"  Action:   Stop irrigation.")
         print("="*40 + "\n")
@@ -98,7 +98,7 @@ def on_message(client, userdata, msg):
         timestamp = data.get("timestamp")
 
         if device_id and moisture is not None and timestamp:
-            print(f"✅ Data Received: {device_id}, Moisture: {moisture}")
+            print(f" Data Received: {device_id}, Moisture: {moisture}")
 
             # Check if connection is valid, otherwise reconnect
             if db_conn.closed:

@@ -43,7 +43,7 @@ try:
 
         # Check if publish was successful
         if result.rc == mqtt.MQTT_ERR_SUCCESS:
-            print(f"✅ Message PUBLISHED to '{MQTT_TOPIC}': {payload_str}")
+            print(f"Message PUBLISHED to '{MQTT_TOPIC}': {payload_str}")
         else:
             print(f"Failed to publish message, return code: {result.rc}")
 
